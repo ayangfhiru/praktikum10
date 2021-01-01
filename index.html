@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>19000016017 Ayangfhiru</title>
+        <style>
+            body{
+                background-color: burlywood;
+            }
+            video{
+                position: absolute;
+                top: 10%;
+                width: 70%;
+                height: 575px;
+                margin-left: 15%;
+                margin-right: 15%;
+            }
+            .btn{
+                text-align: center;
+            }
+            button{
+                border-radius: 12px;
+                font-size: 15px;
+                background-color: seagreen;
+                border: none;
+                display: inline-block;
+                cursor: pointer;
+                margin: 3px 3px;
+                padding: 15px 32px;
+            }
+            button:hover{
+                background-color: silver;
+                color: seagreen;
+                box-shadow: 0 10px 15px 0 rgba(44, 43, 43, 0.24);
+            }
+        </style>
+        <script>
+            function toFM(audio){
+                var hasil, s;
+                if (audio == 'audio1.mp3') {
+                    hasil = audio;
+                    stel = "position: absolute; top: 15%; width: 70%; height: 20px; margin-left: 15%; margin-right: 15%";
+                }
+                else if(audio == 'audio2.mp3'){
+                    hasil = audio;
+                    stel = "position: absolute; top: 15%; width: 70%; height: 20px; margin-left: 15%; margin-right: 15%";
+                }
+                else{
+                    hasil = audio;
+                    stel = "position: absolute; top: 10%; width: 70%; height: 575px; margin-left: 15%; margin-right: 15%";
+                }
+                document.getElementById('video').src = hasil;
+                document.getElementById('video').style = stel;
+                // document.getElementsByTagNameNS('body').style = "background-color: red;";
+            }
+        </script>
+        
+    </head>
+    <body>        
+        <video autoplay controls id="video">
+            <source src="lava.mp4" type="video/mp4">
+            <source src="lava.ogg" type="video/ogg">
+            Browser kamu tadak suport dengan video tag
+        </video>
+        <div class="btn">
+            <button onclick="document.getElementById('video').innerHTML = toFM('lava.mp4')">Video Lava</button>
+            <button onclick="document.getElementById('video').innerHTML = toFM('video1.mp4')">Video Naga</button>
+            <button onclick="document.getElementById('video').innerHTML = toFM('audio1.mp3')">Jeremy Zucker - comethru</button>
+            <button onclick="document.getElementById('video').innerHTML = toFM('audio2.mp3')">Rebelution - Safe And Sound</button>
+        </div>    
+    </body>
+</html>
